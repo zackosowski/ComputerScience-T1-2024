@@ -1,2 +1,5 @@
 # ComputerScience-T1-2024
-Computer Science class repository trimester 1 2024 Mr Osowski
+This is Mr. Osowski's repo for the Trimester 1 classes of Computer science in 2024.
+
+
+
