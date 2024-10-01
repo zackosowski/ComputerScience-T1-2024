@@ -18,3 +18,9 @@ k = 254         #int -> byte
 a = str(a)
 print(a)
 
+b = str(b)
+print(b)
+
+c = int(c)
+print(c)
+
