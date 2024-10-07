@@ -1,126 +1,114 @@
-#2 functions
-print("Hello, World!")          # "Hello, World!" is the parameter
-input("Please enter your username\n>")  # \n is called an escape character
-# \n starts a new line (linebreak)
-# input is never required
+# 2 basic functions
+# You know something is a function because is has () at the end
+# The stuff that goes in those () are called parameters
+# Parameters are informatio the function needs to run
+# I say jump, you say how high? How high is the parameter
+print("Hello World!")   # "Hello World!" is the parameter
+input("What is your favorite animal?\n>")
+# \n is called an escape character (linebreak)
+# input is never required, only use it when necessary
 
-# variables
-#Syntax
+# Variables
+# Variables are a way to store data for later use in the program
+# Syntax (grammar)
 # <name> = <value>
-x = 5
-
-# Snake naming convention - all lowercase, underscore for spaces
+x = 5       # x is the variable name, 5 is the value
+# Snake naming convention - all lowercase, underscores for spaces
 # CONCISE: Short and descriptive
-username = "osowski"        #Define string ("string" of characters)
-fav_animal = "Calugo"       #Define string  ("string" of characters)
-total_poptarts = 12         #Define integer (whole number)
-percent_complete = 23.52    #Define float (decimal numeber)
-is_cool = True              #Define Boolean (True/False)
-first_letter = 'c'          #Define Character (single symbol)
+username = "Osowski"            #Define string (string of characters)
+fav_animal = "Calugo"           #Define string  
+total_poptarts = 12             #Define integer (whole numbers)
+percent_complete = 23.52        #Define float (decimal numbers)
+is_cool = True                  #Define Boolean (True/False values)
+first_letter = 'c'              #Define character (single keyboard symbol)
 
-total_poparts = 8           #Reassign
+total_poptarts = 8              #Reassigning variable
 
-
-# Arithmetic Operators
+# Arithmetic operators (sounds scary, just basic math)
 #   +   -   *   /   **  %   //
-print(4 + 4)            #> 8
-print("4" + "4")        #> 44
-print("cat" + "dog")    #> catdog
-print("cat" * 3)        #> catcatcat
-print("cat" + 3)        #> ERROR: Cannot use + for string and int
+print(2 + 2)            #>8
+print("2" + "2")        #>22
+print("cat" + "dog")    #>catdog
+print("cat" * 3)        #>catcatcat
+print("cat" + 3)        #>ERROR: Cannot use + for string and int
+print("cat" * "dog")    #>ERROR: Cannot use * for string and string
 
-#Make some working programs
-# 1. add two numbers using input
-x = int(input("What is x?\n>"))     # input() always returns a string                      
-y = input("What is y?\n>")          # even if you type in a number
-y = int(y)                          # convert from string to int
-print(x + y)
+my_variable = 2 + 3     # Arithmetic operations can be done anywhere
 
-# 2. Converts celcius to farenheight using input
-temp_celcius = input("What is the temperature in Celcius?\n>")
-temp_celcius = int(temp_celcius)                    #convert to integer
-temp_farenheight = (temp_celcius * 1.8) + 32    
-print(temp_celcius + " degrres C equals " + temp_farenheight + " degrees F")
+# Make some working programs
+#1. add two numbers using input
+x = input("What is x?\n>")  #input function always returns a string
+x = int(x)                  #Convert string ot int
 
+y = input("What is y?\n>")  
+y = int(y)                  #Convert string to int
 
-#Some conversion functions
+print(x + y)                #Print result
+
+#2. Convert Celcius to Farenheight using input
+temp_celcius = input("What is the tmeperature in Celcius?\n>")
+#Input always returns a string, even if you enter a number
+temp_celcius = int(temp_celcius)
+temp_farenheight = (temp_celcius * 1.8) + 32
+print(temp_celcius + "° C is " + temp_farenheight + "° F")
+
+# Conversion functions
 str()
 int()
 float()
-bin()
 bool()
+bin()
 
-#The stuff that goes between the parenthesis is called PARAMETERS
-#Parameters are the values that the function needs to run
-
-
-# Fuctions
-# Functions are a lot like variables
+# Functions
+# Functions are lot like variables
 # They have names
 # They can be recalled from memory by calling their name
 # Store information
-# Variables store values, functions store code
-def potato():           #def keyword + name + () + :
-    print("potato")     #lines indented underneath are "inside" the function
+# Variable store a value, functions store code
+# def <name> ():
+def potato():
+    print("tomato")
 
-# functions are not ran when they are defined
-# they must be called by their name to run
-potato()    # Every function call needs open and closed parenthesis
-            # even if it has no parameters
+potato()        # Every function call needs parenthesis
+                #Even if it has no parameters
 
 def jump(how_high):
-    print("You jumpped " + str(how_high) + " inches!")
+    how_high = str(how_high)        #Convert to string for concatentation
+    print("You jumped " + how_high + " inches high.")
 
 jump(14)
 
-def make_a_word(a, b, c, d, e, f, g, h, i, j, k):
-    print(a + b + c + d + e + f + g + h + i + j + k)
-
-make_a_word("Z", "a", "c", "k", "O", "s", "o", "w", "s", "k", "i")
-
-#Functions can have many many lines
-def top_ten_games():
-    print("1. Elden Ring")
-    print("2. Shadow of the Colossus")
-    print("3. Minecraft")
-    print("4. Diablo 3")
-    print("5. Gran Turismo 7")
-    print("6. Overwatch")
-    print("7. Rachet & Clank: Up Your Arsenal")
-    print("8. World of Warcraft")
-    print("9. Path of Exile")
-    print("10. Enter the Gungeon")
-
-#Scope: Global and Local Variables!!
-#Scope refers to the context in which the variable was defined
-#GLOBAL- defined at no indentation level
-#LOCAL- defined inside of a function
+# Scope
+# Global vs Local variables
+#GLOBAL: defined at no indentation level
+#LOCAL: defined inside of functions, also parameters are local vars
 
 #Global variables can be used anywhere
-todd = "cool guy"       #Global variable- no indentation level
+todd = "cool guy"       #GLOBAL VARIABLE - no indentation level
 
-#Local variables only exist in the scope they were defined
+#Local variables only exist in the context the y were defined in
 def my_function():
-    smith = "not cool guy"  #Local variable- define in a function
-    todd = "strange guy"    #Local variable even though it has the same name
-    print(todd)             #Prints "strange guy" - local variable
-    # When you call a variable in a function
-    # It searches local variables first, then global variables
+    global todd     #In this function, todd is referring to the global version
+    smith = "not cool guy"
+    todd = "strange guy"
+    print(todd)         # strange guy
+    print(smith)        # not cool guy
 
-#If you want to reassign a global variable inside of a function
-todd = "cool guy"
-def my_function2():
-    global todd             # In this function, whenever I call todd
-                            # I mean the global todd, not the local
-    todd = "strange guy"    # Reassign todd - global
-    print(todd)             # print todd - global
+print(todd)             # strange guy
+print(smith)            #ERROR: using a local varible out of scope
 
 #Return functions
-#Fuctions can also return values
-#The value that is returned is sent back to where the function was called
-#This is very similar to how a variable works
-#The function does its work and returns an answer back
-def add2(x, y):
-    return x + y    #returns the sum of x and y to where the function was called
+# Functions can also return values
+# The value that is returned is sent back to where the function was called
+# This is very similar to how variables work
+# The function does it work, and returns an answer back
+def add_two_numbers(x, y):
+    solution = x + y
+    return solution      
 
-print(add2(2, 10))  
+print(add_two_numbers(10, 5))
+answer = add_two_numbers(10, 16)
+print(answer)
+
+x = "5"
+x = int(x)
