@@ -5,3 +5,4 @@ while True:
         cp.pixels[i] = (0,1,0)
         time.sleep(0.2)
         cp.picels[i] = (0,0,0)
+        
