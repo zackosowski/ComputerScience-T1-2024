@@ -34,9 +34,3 @@ if input_pass == real_pass:
     print("ACCESS GRANTED")
 else:
     print("ACCESS DENIED")
-
-
-# Simple Quiz Assignment
-# Create a five question quiz that prints your score at the end
-# Choose any five questions
-# EZ
